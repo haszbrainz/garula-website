@@ -1,0 +1,421 @@
+:root{
+    --listlang: 8vh;
+    --listnavmobile: 14vh;
+    --ukuranButton: 8vh;
+    --jaraknotif: 15vh;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: satoshi, sans-serif;
+    color: #323B42;
+}
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #fff;
+    opacity: 0.2;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #0E9084;
+    border-radius: 5px;
+}
+#button{
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    transition: transform 250ms;
+}
+#button:hover{
+    transform: translateX(10px);
+}
+#arrow{
+    padding-left: 20;
+    width: 40px;
+}
+/* Perbaikan */
+nav a{
+    color: #323B42 !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+#nav{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 2rem 2rem;
+    z-index: 10;
+}
+.klw-nav{
+    list-style-type: none;
+}
+#logoNav{
+    width: 60%;
+    height: auto;
+    margin: 0;
+    display: inline;
+    cursor: pointer;
+}
+#klw-lang-desk{
+    margin-right: 0;
+}
+#nav>div>ul{
+    margin-bottom: 0;
+}
+#nav>div>ul>li{
+    margin-right: 3%;
+}
+#nav>div>ul>li>a{
+    width: 120%;
+    text-align: center;
+    transition: 0.2s ease-out;
+}
+#nav>div>ul>li>a:hover{
+    letter-spacing: 0.05rem;
+}
+a[class*=active]{
+    font-weight: bold;
+}
+.klw-icon-lang{
+    width: 30%;
+    min-width: 10px;
+    height: auto;
+}
+#klw-lang-desk>div{
+    border: 1px solid #323B42;
+    width: 33.33%;
+    min-width: 30px;
+    border-radius: 1rem;
+    cursor: pointer;
+    z-index: 11;
+    transition: 0.2s ease-out;
+}
+#klw-lang-desk>div>span{
+    text-align: center;
+}
+#klw-list-lang{
+    display: none;
+    position: fixed;
+    z-index: 11;
+    right: 0;
+    margin-right: 5.6%;
+}
+#klw-list-lang a{
+    color: white !important;
+    text-decoration: none;
+}
+#klw-list-lang>ul{
+    list-style-type: none;
+    background-color: #323B42;
+    color: white;
+}
+#klw-list-lang>ul>li{
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+#klw-list-lang>ul>li:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#klw-list-lang>ul>li>img{
+    width: 10%;
+    margin-left: 8%;
+}
+#klw-placeholder-quit, #klw-placeholder-quit1{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+}
+#navMobileButton>img{
+    cursor: pointer;
+}
+#klw-list-mobilenav{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    margin-right: 3%;
+    top: var(--listnavmobile);
+}
+#klw-list-mobilenav a{
+    color: white !important;
+    text-decoration: none;
+}
+#klw-list-mobilenav>ul{
+    list-style-type: none;
+    background-color: #323B42;
+    color: white;
+}
+#klw-list-mobilenav>ul>li{
+    transition: 0.2s ease-out;
+}
+#klw-list-mobilenav>ul>li[class*=klw-list-divider]{
+    height: 1px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: default;
+}
+#klw-list-mobilenav>ul>li>p{
+    color: rgba(255, 255, 255, 0.75);
+    cursor: default;
+}
+#klw-list-mobilenav>ul>li:not(#klw-list-mobilenav>ul>li:nth-child(5), #klw-list-mobilenav>ul>li:nth-child(6)):hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+#klw-list-mobilenav *[class*=klw-icon-lang]{
+    width: 10%;
+    min-width: 10px;
+    height: auto;
+}
+#rowScrollButton{
+    margin-bottom: 10vh;
+}
+#rowScrollButton, #rowChatButton{
+    pointer-events: none;
+}
+#scrollButton, #chatButton{
+    width: auto;
+    height: var(--ukuranButton);
+    aspect-ratio: 1;
+    margin-bottom: 7.5vh;
+    pointer-events: visible;
+    cursor: pointer;
+}
+#scrollButton{
+    display: none;
+    background-color: #0E9084;
+}
+#chatButton{
+    background-color: #323B42;
+}
+#scrollButton>div, #chatButton>div{
+    transition: 0.2s ease-out;
+}
+#scrollButton:hover>div, #chatButton:hover>div{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#scrollButton>div>img, #chatButton>div>img{
+    width: 100%;
+    height: auto;
+}
+#notif{
+    display: none;
+    background-color: #0E9084;
+    top: var(--jaraknotif);
+}
+#notif>p{
+    font-style: normal; 
+    font-size: 1.5rem; 
+    font-weight: 400;
+    color: white;
+}
+#section1>div>#fotokanan{
+    background-image: url(../media/office.jpg);
+    background-repeat: no-repeat;
+    background-size: 175%;
+    background-position-x: 70%;
+    height: 100vh;
+}
+#section1 h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #0E9084;
+}
+#section1 h4{
+    color: #000; 
+    font-weight: 400; 
+    font-size: 1.75rem;
+}
+#section1 p{
+    color: #000; 
+    font-style: normal; 
+    font-size: 1.5rem; 
+    font-weight: 400;
+}
+#section1 div[class*=klw-form]>input{
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+#section1 button[class*=klw-submit]{
+    background-color: #0E9084;
+    color: #fff;
+    border-radius: 0;
+    transition: 0.2s ease-out;
+}
+#section1 button[class*=klw-submit]:hover{
+    background-color: #323B42;
+}
+footer{
+    background-color: #323B42;
+}
+footer a{
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+footer h2, footer h4, footer a:hover, footer a:active, footer p{
+    color: white;
+}
+footer h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.25rem;
+}
+footer h4{
+    font-weight: 500; 
+    font-size: 1.5rem;
+}
+footer a, footer p{
+    font-style: normal; 
+    font-size: 1rem; 
+    font-weight: 400;
+    text-decoration: none;
+}
+footer>p{
+    text-align: right;
+    right: 0;
+}
+footer>div>div:nth-of-type(1)>div>img{
+    width: 5%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+footer>div>div:nth-of-type(1)>div>img, footer>div>div:nth-of-type(3)>div>img{
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+footer>div>div:nth-of-type(1)>div>img:hover{
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    width: 6%;
+}
+footer>div>div:nth-of-type(3)>div>img{
+    width: 7.5%;
+}
+@keyframes munculMenuLang {
+    0%{
+        top: calc(var(--listlang) - 5vh);
+        opacity: 0;
+    }
+    100%{
+        top: var(--listlang);
+        opacity: 1;
+    }
+}
+@keyframes buangMenuLang {
+    0%{
+        top: var(--listlang);
+        opacity: 1;
+    }
+    100%{
+        top: calc(var(--listlang) - 5vh);
+        opacity: 0;
+    }
+}
+@keyframes munculMenuNavMobile {
+    0%{
+        top: calc(var(--listnavmobile) - 5vh);
+        opacity: 0;
+    }
+    100%{
+        top: var(--listnavmobile);
+        opacity: 1;
+    }
+}
+@keyframes buangMenuNavMobile {
+    0%{
+        top: var(--listnavmobile);
+        opacity: 1;
+    }
+    100%{
+        top: calc(var(--listnavmobile) - 5vh);
+        opacity: 0;
+    }
+}
+@keyframes munculScrollButton {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: var(--ukuranButton);
+        opacity: 1;
+    }
+}
+@keyframes buangScrollButton {
+    0%{
+        height: var(--ukuranButton);
+        opacity: 1;
+    }
+    100%{
+        height: 0;
+        opacity: 0;
+    }
+}
+@keyframes munculNotif {
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+    100%{
+        top: var(--jaraknotif);
+        opacity: 1;
+    }
+}
+@keyframes buangNotif {
+    0%{
+        top: var(--jaraknotif);
+        opacity: 1;
+    }
+    100%{
+        top: 0;
+        opacity: 0;
+    }
+}
+@media only screen and (min-width: 900px){
+    *[show-mobile=true]{
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 900px){
+    *[class*=klw-txt-sml]{
+        font-size: 1rem !important;
+    }
+    *[class*=klw-txt-med]{
+        font-size: 1.75rem !important;
+    }
+    *[class*=klw-txt-lrg]{
+        font-size: 2.2rem !important;
+        line-height: 3rem !important;
+    }
+    *[hide-mobile=true]{
+        display: none !important;
+    }
+    .klw-lang{
+        display: block;
+    }
+    #nav{
+        border-radius: 0 0 1rem 1rem;
+    }
+    #section1>div:nth-of-type(1){
+        background-size: 150%;
+        background-position-x: 60%;
+    }
+}
+@media only screen and (max-width: 600px){
+    #section1>div>#fotokanan{
+        background-size: 200%;
+        background-position-x: 70%;
+        height: 75vh;
+    }
+}
